@@ -1,5 +1,4 @@
-# 
-RoseGoldGallery-with-Zustand-Nextjs-MaterialUi
+# RoseGoldGallery-with-Zustand-Nextjs-MaterialUi
 
 
 
