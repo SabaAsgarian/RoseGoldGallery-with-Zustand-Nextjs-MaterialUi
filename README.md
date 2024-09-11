@@ -8,16 +8,17 @@ RoseGoldGallery-with-Zustand-Nextjs-MaterialUi
 - Developed by Saba Asgarian
 
 
+![a](https://github.com/user-attachments/assets/865fd3ed-5281-47c1-b755-72131628db95)
+
+![b](https://github.com/user-attachments/assets/411f32aa-ade2-456d-bf26-153d79621b9a)
+
+![c](https://github.com/user-attachments/assets/15d6b888-7f02-4fc4-9b8f-a02b1dee09b9)
 
 
-
-![lg](https://github.com/user-attachments/assets/86541bd8-a8e3-41f8-a3a3-16b3573a2893)
-
+![d](https://github.com/user-attachments/assets/11c13f25-8106-4203-9369-0d2bec63b137)
 
 
-
-
-
+![e](https://github.com/user-attachments/assets/ec06f35d-49de-43e9-b46c-30d8168110c6)
 
 
 
