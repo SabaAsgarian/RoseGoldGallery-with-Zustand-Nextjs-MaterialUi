@@ -24,12 +24,12 @@ export default function MultiActionAreaCard({ data }) { // Accept data as a prop
         <myContext.Provider value={data} key={'post' + data.id}>
        
    
-        <Card sx={{ maxWidth: 345 ,border:'1px solid black' }}>
+        <Card sx={{ maxWidth: 355 ,border:'1px solid black' }}>
             <CardActionArea>
                 <div style={{ backgroundColor: '#faf7f1', padding: '16px' }}> {/* Added div for background color */}
                     <CardMedia
                         component="img"
-                        height="200"
+                        height="220"
                         image={data.img}
                         alt={data.category}
                     />

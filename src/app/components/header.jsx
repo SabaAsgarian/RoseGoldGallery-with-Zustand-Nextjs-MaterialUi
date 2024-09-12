@@ -191,7 +191,7 @@ export default function PrimarySearchAppBar() {
 
   // Change display text in an infinite loop
   React.useEffect(() => {
-    const texts = ['⭐ Shine With Rose ⭐', 'Return Policy After One Month Using'];
+    const texts = ['⭐ Shine With Rose ⭐', '🔄Return Policy After One Month Using🔄'];
     let index = 0;
 
     const timer = setInterval(() => {
@@ -278,16 +278,16 @@ export default function PrimarySearchAppBar() {
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer sx={{ height: { xs: '160px', sm: '160px', md: '80px', lg: '80px' } }}> {/* Adjust height for xs, sm, and md */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <CallIcon />
           <Typography variant="h6" sx={{ marginLeft: 1 }}>01171822</Typography>
         </Box>
-        <Typography variant="h6">{displayText}</Typography> {/* Display dynamic text */}
+        <Typography style={{textAlign:'center'}} variant="h6">{displayText}</Typography> {/* Display dynamic text */}
         <Typography variant="h6">{goldPrice}$</Typography> {/* Display gold price here */}
       </HeaderContainer>
       <SupportContainer>
-        <Typography variant="h6" sx={{ color: 'white' }}>👆WhatsApp Support</Typography>
+        <Typography variant="h6" sx={{ color: 'white',textAlign:'center' }}>👆WhatsApp Support</Typography>
       </SupportContainer>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
@@ -315,7 +315,7 @@ export default function PrimarySearchAppBar() {
               variant="h6"
               noWrap
               component="div"
-              sx={{ flexGrow: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '15%' }}
+              sx={{ flexGrow: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: { xs: 0, lg: '15%' } }} // {{ edit_1 }} Apply marginLeft only for xl and above
             >
               <Link href="/" passHref> {/* {{ edit_1 }} Wrap Image with Link */}
                 <Image src={logo} alt="logo" height={50} width={100} />

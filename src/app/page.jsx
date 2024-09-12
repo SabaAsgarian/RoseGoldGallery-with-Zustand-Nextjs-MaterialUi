@@ -339,7 +339,7 @@ export default function Page() {
       </Box>
       <Swiper />
       {/* g//////////////////////////////////////////////////////// */}
-      <Grid container spacing={0} sx={{ marginTop: '10%' }} className='Last'>
+      <Grid container spacing={0} sx={{ marginTop: '10%',backgroundColor:'#faf7ef' }} className='Last'>
         <Grid item xs={12} md={6} lg={6} xl={6}>
 
 
@@ -380,12 +380,14 @@ export default function Page() {
               }}
             >
               <h1 style={{ fontSize: '30px', fontWeight: 'bolder', textAlign: 'start' }} className='h1 w-full'>We Design Gold Differently</h1> {/* Updated text alignment */}
-              <p className='p'>Because beautiful jewelry is an expression of yourself: wear what you want, how you want, or celebrate whenever you want, and keep it forever. These products are for your big moments and everyday use.</p>
+             <Box style={{ textAlign: 'start', marginLeft: '0',width:'100%' }}>
+             <p className='p' style={{width:'70%'}}>Because beautiful jewelry is an expression of yourself: wear what you want, how you want, or celebrate whenever you want, and keep it forever. These products are for your big moments and everyday use.</p>
+             </Box>
               <Box className='listt' style={{ textAlign: 'start', marginLeft: '0' }}> {/* Updated text alignment */}
-                <p style={{ fontWeight: 'bolder' }}>High commitment</p>
-                <p style={{ fontWeight: 'bolder' }}>Innovation in design</p>
-                <p style={{ fontWeight: 'bolder' }}>24 hour response</p>
-                <p style={{ fontWeight: 'bolder' }}>sustainability</p>
+                <p style={{ fontWeight: 'bolder',width:'100%' }}>High commitment</p>
+                <p style={{ fontWeight: 'bolder',width:'100%' }}>Innovation in design</p>
+                <p style={{ fontWeight: 'bolder',width:'100%' }}>24 hour response</p>
+                <p style={{ fontWeight: 'bolder',width:'100%' }}>sustainability</p>
               </Box>
             </Box>
             <Link href="./components/shop" style={{ color: 'black', margin: '0 10px', textDecoration: 'none' }}>

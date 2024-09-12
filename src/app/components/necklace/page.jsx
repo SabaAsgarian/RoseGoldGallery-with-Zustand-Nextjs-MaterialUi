@@ -20,7 +20,7 @@ export default function NecklacePage() {
   const [data, setData] = useState([]); 
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); // State for error handling
-  const [windowWidth, setWindowWidth] = useState(0); // Initialize with a default value
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
   const {addProduct} = useStore()
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +38,9 @@ export default function NecklacePage() {
   }, []);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth); // Update state on client
+    const handleResize = () => setWindowWidth(window.innerWidth); // Update width on resize
+    window.addEventListener('resize', handleResize); // Add event listener
+    return () => window.removeEventListener('resize', handleResize); // Cleanup on unmount
   }, []);
 
   if (loading) return <p>Loading...</p>; 
@@ -54,12 +56,13 @@ export default function NecklacePage() {
       <Box style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '60%', margin: '5% auto' }}>
        <CustomizedBreadcrumbs/>
       </Box>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '75%', margin: '0 auto' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: windowWidth < 600 ? '75%' : windowWidth < 1024 ? '90%' : '75%', margin: '5% auto' }}>
         {data.length > 0 ? (
           data.map(item => (
             <div key={item.id} style={{ 
-              flex: windowWidth < 1024 ? '1 0 100%' : '1 0 30%', 
-              margin: '10px' 
+              flex: windowWidth < 600 ? '1 0 100%' : windowWidth < 1024 ? '1 0 50%' : '1 0 33.33%', // Adjust flex based on screen size
+              marginBottom:'5%',
+              
             }}>
               <MultiActionAreaCard data={item} />
             </div>

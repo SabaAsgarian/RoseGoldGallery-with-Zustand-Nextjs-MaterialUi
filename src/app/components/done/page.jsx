@@ -18,13 +18,12 @@ export default function page() {
                 <CustomizedBreadcrumbs />
             </Box>
             <Box style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '60%', margin: '5% auto' }}>
-            <Stack sx={{ width: '50%' }} spacing={2} >
+            <Stack sx={{ width: { xs: '95%', sm: '95%', md: '85%', lg: '55%' } }} spacing={2} > {/* Adjust width for different screen sizes */}
                 <Alert variant="outlined" severity="success" sx={{backgroundColor:'#edf7ed'}}>
                     Your Payment Was Succesful. <br />
                     Your Order Will Be On The Way Soon. <br />
                     Thank You For Shopping With Us.
                 </Alert>
-
             </Stack>
             </Box>
             <Footer />

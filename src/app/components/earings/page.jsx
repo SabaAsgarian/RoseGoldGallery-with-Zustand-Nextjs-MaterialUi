@@ -20,6 +20,8 @@ export default function EarringsPage() { // Change the function name to match th
   const [data, setData] = useState([]); // Initialize state for data
   const [loading, setLoading] = useState(true); // Initialize state for loading
   const {addProduct} = useStore()
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -34,6 +36,13 @@ export default function EarringsPage() { // Change the function name to match th
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth); // Update width on resize
+    window.addEventListener('resize', handleResize); // Add event listener
+
+    return () => window.removeEventListener('resize', handleResize); // Cleanup on unmount
+  }, []);
+
   if (loading) return <p>Loading...</p>; // Display loading message if data is loading
 
   return (
@@ -46,18 +55,19 @@ export default function EarringsPage() { // Change the function name to match th
       <Box style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '60%', margin: '5% auto' }}>
        <CustomizedBreadcrumbs/>
       </Box>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center',alignItems:'center', width: '75%', margin: '0 auto' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: windowWidth < 600 ? '75%' : windowWidth < 1024 ? '90%' : '75%', margin: '5% auto' }}>
         {data.length > 0 ? (
           data.map(item => (
             <div key={item.id} style={{ 
-              flex: window.innerWidth < 1024 ? '1 0 100%' : '1 0 30%', // Adjust flex based on screen size
-              margin: '10px' 
-            }}> {/* Each card takes up 30% of the row */}
+              flex: windowWidth < 600 ? '1 0 100%' : windowWidth < 1024 ? '1 0 50%' : '1 0 33.33%', // Adjust flex based on screen size
+              marginBottom:'5%',
+              
+            }}>
               <MultiActionAreaCard data={item} />
             </div>
           ))
         ) : (
-          <p>No data available</p> // Message if no data
+          <p>No data available</p>
         )}
       </div>
       <Footer/>

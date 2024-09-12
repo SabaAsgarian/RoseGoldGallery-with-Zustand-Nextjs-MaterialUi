@@ -21,7 +21,7 @@ export default function BraceletPage() {
   const [data, setData] = useState([]); 
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
-  const [windowWidth, setWindowWidth] = useState(0); // State for window width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
   const {addProduct} = useStore()
   useEffect(() => {
     const fetchData = async () => {
@@ -61,12 +61,13 @@ export default function BraceletPage() {
       <Box style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '60%', margin: '5% auto' }}>
        <CustomizedBreadcrumbs/>
       </Box>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '75%', margin: '5% auto' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: windowWidth < 600 ? '75%' : windowWidth < 1024 ? '90%' : '75%', margin: '5% auto' }}>
         {data.length > 0 ? (
           data.map(item => (
             <div key={item.id} style={{ 
-              flex: windowWidth < 1024 ? '1 0 100%' : '1 0 30%', 
-              margin: '10px' 
+              flex: windowWidth < 600 ? '1 0 100%' : windowWidth < 1024 ? '1 0 50%' : '1 0 33.33%', // Adjust flex based on screen size
+              marginBottom:'5%',
+              
             }}>
               <MultiActionAreaCard data={item} />
             </div>

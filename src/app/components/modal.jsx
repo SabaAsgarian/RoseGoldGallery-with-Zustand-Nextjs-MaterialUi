@@ -110,9 +110,9 @@ function SignUpModal({ open, handleClose }) {
 
   return (
     <Modal open={open} onClose={handleClose}>
-      <Box sx={{ ...style, width: '80%', height: '80%' }}>
+      <Box sx={{ ...style, width: '80%', height: '80%',overflow:'scroll' }}>
         <h2>Sign Up</h2>
-        <Box sx={{ '& > :not(style)': { m: 1 } }}>
+        <Box sx={{ }}>
           <FormControl variant="standard">
             <WhiteTextField
               id="img"

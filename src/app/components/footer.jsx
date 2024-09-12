@@ -51,19 +51,19 @@ export default function footer() {
                     {/* New Box for Return Policy and Warranty */}
                     <Box sx={{ display: 'flex', justifyContent: 'space-around', width: '100%', height: '100px', backgroundColor: 'transparent', color: 'black' ,marginBottom:'7%',marginTop:'5%',textAlign: "center" }}> {/* Main container for two boxes */}
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '25%' }}> {/* First box */}
-                            <AssignmentReturnedOutlinedIcon  sx={{fontSize:'40px',boxShadow:'1px 1px 50px 0px #c6a55f inset',borderRadius:"50%"}} /> {/* Icon */}
+                            <AssignmentReturnedOutlinedIcon  sx={{fontSize:'40px',boxShadow:'1px 1px 100px 0px #c6a55f inset',borderRadius:"50%"}} /> {/* Icon */}
                             <Typography variant="body1" sx={{ marginTop: 1 }}>Return Policy After a Month</Typography> {/* Text */}
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '25%', textAlign: "center"}}> {/* First box */}
-                            <RedeemOutlinedIcon  sx={{fontSize:'40px',boxShadow:'1px 1px 50px 0px #c6a55f inset',borderRadius:"50%"}} /> {/* Icon */}
+                            <RedeemOutlinedIcon  sx={{fontSize:'40px',boxShadow:'1px 1px 100px 0px #c6a55f inset',borderRadius:"50%"}} /> {/* Icon */}
                             <Typography variant="body1" sx={{ marginTop: 1 }}>Sending multiple products at the same time</Typography> {/* Text */}
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '25%' }}> {/* Second box */}
-                            <GppGoodOutlinedIcon  sx={{fontSize:'40px',boxShadow:'1px 1px 50px 0px #c6a55f inset',borderRadius:"50%"}}  /> {/* Icon */}
+                            <GppGoodOutlinedIcon  sx={{fontSize:'40px',boxShadow:'1px 1px 100px 0px #c6a55f inset',borderRadius:"50%"}}  /> {/* Icon */}
                             <Typography variant="body1">Forever Warranty</Typography> {/* Text */}
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '25%' }}> {/* Second box */}
-                            <ChangeCircleOutlinedIcon sx={{fontSize:'40px',boxShadow:'1px 1px 50px 0px #c6a55f inset',borderRadius:"50%"}} /> {/* Icon */}
+                            <ChangeCircleOutlinedIcon sx={{fontSize:'40px',boxShadow:'1px 1px 100px 0px #c6a55f inset',borderRadius:"50%"}} /> {/* Icon */}
                             <Typography variant="body1">Exchange Up To A week</Typography> {/* Text */}
                         </Box>
                     </Box>

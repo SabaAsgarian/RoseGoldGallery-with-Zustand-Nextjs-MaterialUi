@@ -55,11 +55,11 @@ export default function page() {
             <Box style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '60%', margin: '5% auto' }}>
 
                 {userData && (
-                    <div style={{backgroundColor:'#f0f0f0',padding:'20px',borderRadius:'10px'}}>
+                    <Box style={{ width: { xs: '95%', sm: '95%', md: '85%', lg: '55%' },backgroundColor:'#f1eee4',padding:'20px',borderRadius:'10px'}}>
                         <div><h1>Welcome back</h1>{userData.email}!</div>
                         <div>Your password is: {userData.password}</div> {/* Display password if needed */}
                         {/* Display password if needed */}
-                    </div>
+                    </Box>
                 )}
             </Box>
             <Footer />
