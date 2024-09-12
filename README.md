@@ -3,7 +3,7 @@
 
 
 
-- [Demo Project](https://rosegoldgallerry.vercel.app/)
+- [Demo Project](https://rosegoldgallery.vercel.app/)
 - Developed by Saba Asgarian
 
 
