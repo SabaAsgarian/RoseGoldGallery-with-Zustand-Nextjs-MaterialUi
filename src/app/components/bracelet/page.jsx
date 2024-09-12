@@ -17,12 +17,14 @@ async function getData() {
   return res.json();
 }
 
-export default function BraceletPage() { 
+
+const BraceletPage = () =>  { 
   const [data, setData] = useState([]); 
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
+  // Initialize to 0 or a default value
   const {addProduct} = useStore()
+  const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,6 +48,12 @@ export default function BraceletPage() {
     return () => {
       window.removeEventListener('resize', handleResize); // Cleanup listener
     };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth); // Set window width only on the client
+    }
   }, []);
 
   if (loading) return <p>Loading...</p>; 
@@ -80,4 +88,4 @@ export default function BraceletPage() {
     </div>
   );
 };
-
+export default BraceletPage;

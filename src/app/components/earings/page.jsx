@@ -16,11 +16,13 @@ async function getData() {
   return res.json();
 }
 
-export default function EarringsPage() { // Change the function name to match the file
+const EarringsPage = () => {
   const [data, setData] = useState([]); // Initialize state for data
   const [loading, setLoading] = useState(true); // Initialize state for loading
+  const [error, setError] = useState(null); // Initialize state for error
+ // Initialize to 0 or a default value
   const {addProduct} = useStore()
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
+  const [windowWidth, setWindowWidth] = useState(0); // Initialize to 0 or a default value
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,21 +31,32 @@ export default function EarringsPage() { // Change the function name to match th
         setData(result);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setError(error.message);
       } finally {
         setLoading(false);
       }
     };
+
     fetchData();
+
+    // Update window width on client
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Set initial width
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup listener
+    };
   }, []);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth); // Update width on resize
-    window.addEventListener('resize', handleResize); // Add event listener
-
-    return () => window.removeEventListener('resize', handleResize); // Cleanup on unmount
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth); // Set window width only on the client
+    }
   }, []);
 
   if (loading) return <p>Loading...</p>; // Display loading message if data is loading
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div>
@@ -74,4 +87,6 @@ export default function EarringsPage() { // Change the function name to match th
     </div>
   );
 };
+
+export default EarringsPage;
 
