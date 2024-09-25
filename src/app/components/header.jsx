@@ -361,6 +361,11 @@ export default function PrimarySearchAppBar() {
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
+                <ListItemButton component="a" href="../components/shop">
+                  <ListItemText primary="All" />
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
                 <ListItemButton component="a" href="../components/bracelet">
                   <ListItemText primary="Bracelet" />
                 </ListItemButton>
