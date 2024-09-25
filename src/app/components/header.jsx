@@ -420,8 +420,3 @@ export default function PrimarySearchAppBar() {
 
 
 
-
-///////////https://66d85c8037b1cadd8054668b.mockapi.io/Rings
-///////https://66d85c8037b1cadd8054668b.mockapi.io/necklace
-////////////https://66d8636f37b1cadd805483c8.mockapi.io/earings
-////////////https://66d8636f37b1cadd805483c8.mockapi.io/bracelet
