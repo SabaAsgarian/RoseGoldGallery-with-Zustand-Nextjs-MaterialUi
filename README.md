@@ -8,7 +8,7 @@
 
 - ✍Created - 2024-09-11✍
 
-- 💻Technologies Used - Html , Css , Nextjs,Materialui,react💻
+- 💻Technologies Used - Html , Css , Nextjs,Materialui,React💻
 
 - Hooks Used : useState 
 
