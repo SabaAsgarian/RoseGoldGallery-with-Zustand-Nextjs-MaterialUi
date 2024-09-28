@@ -193,7 +193,7 @@ export default function Page() {
 
 
 
-          <Link href="./components/necklace" passHref>
+          <Link href="./components/earings" passHref>
             <Box
               sx={{
                 cursor: 'pointer',
@@ -252,7 +252,7 @@ export default function Page() {
           </Link>
         </Grid>
         <Grid item xs={12} md={6} lg={6} xl={6}>
-          <Link href="./components/earings" passHref>
+          <Link href="./components/necklace" passHref>
             <Box
               sx={{
                 cursor: 'pointer',
