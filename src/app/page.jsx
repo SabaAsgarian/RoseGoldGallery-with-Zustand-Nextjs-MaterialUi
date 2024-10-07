@@ -25,7 +25,7 @@ export default function Page() {
       <PrimarySearchAppBar /> {/* Moved to the top */}
       <Box sx={{ width: '100%', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Link href="./components/shop" style={{ color: 'black', margin: '0 10px', textDecoration: 'none' }}>
-          <Image src={gif} alt="GIF" layout="responsive" priority /> {/* Full width GIF */}
+           <Image src={gif} alt="GIF" style={{width:'100%' , height:'auto'}}/> 
         </Link>
 
         {/* Grid for images */}
