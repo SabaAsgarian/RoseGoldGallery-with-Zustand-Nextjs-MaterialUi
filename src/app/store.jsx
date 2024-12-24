@@ -12,6 +12,7 @@ const useStore = create((set) => ({
       newProducts = [...state.products];
     } else {
       newProducts = [...state.products, product];
+       alert('Product Added in cart!');
     }
     localStorage.setItem('cartProducts', JSON.stringify(newProducts));
     return { products: newProducts };
