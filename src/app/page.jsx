@@ -24,9 +24,11 @@ export default function Page() {
     <>
       <PrimarySearchAppBar /> {/* Moved to the top */}
       <Box sx={{ width: '100%', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Link href="./components/shop" style={{ color: 'black', margin: '0 10px', textDecoration: 'none' }}>
-           <Image src={gif} alt="GIF" style={{width:'100%' , height:'auto'}}/> 
+       <Box sx={{width:'100%',height:'100%'}}>
+       <Link href="./components/shop" style={{ color: 'black', margin: '0 10px', textDecoration: 'none' }}>
+          <Image src={gif} alt="GIF" style={{width:'100%' , height:'auto'}}/> {/* Full width GIF */}
         </Link>
+       </Box>
 
         {/* Grid for images */}
         <Grid container spacing={0} sx={{ marginTop: 2 }}>
@@ -193,7 +195,7 @@ export default function Page() {
 
 
 
-          <Link href="./components/earings" passHref>
+          <Link href="./components/necklace" passHref>
             <Box
               sx={{
                 cursor: 'pointer',
@@ -252,7 +254,7 @@ export default function Page() {
           </Link>
         </Grid>
         <Grid item xs={12} md={6} lg={6} xl={6}>
-          <Link href="./components/necklace" passHref>
+          <Link href="./components/earings" passHref>
             <Box
               sx={{
                 cursor: 'pointer',
@@ -468,4 +470,3 @@ export default function Page() {
     </>
   )
 }
-'/'
